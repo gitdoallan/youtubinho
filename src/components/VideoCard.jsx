@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import propTypes from 'prop-types';
 
 export default function VideoCard(props) {
-  console.log(props);
   const {
     id, title, publishedTime, richThumbnail, thumbnails, duration, viewCount,
   } = props;
+
   const [thumbnailRich, setThumbnailRich] = useState(false);
+
   return (
     <li>
       <Link to={`/video/${id}`} state={{ ...props }}>

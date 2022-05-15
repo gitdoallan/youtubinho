@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 
 const state = {
   pip: false,
-  playing: false,
+  playing: true,
   controls: false,
   light: false,
   volume: 0.8,

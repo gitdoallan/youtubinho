@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
-import { trendingAPI } from '../services/api';
+import React from 'react';
+import VideoCardTrendingAPI from './VideoCardTrendingAPI';
 
 export default function TrendingVideos() {
-  useEffect(() => {
-    trendingAPI().then(({ contents }) => {
-      console.log(contents);
-    }).catch((err) => console.log(err));
-  }, []);
   return (
-    <div>TrendingVideos</div>
+    <div>
+      <VideoCardTrendingAPI type="n" />
+      <VideoCardTrendingAPI type="mu" />
+      <VideoCardTrendingAPI type="mo" />
+      <VideoCardTrendingAPI type="g" />
+    </div>
   );
 }

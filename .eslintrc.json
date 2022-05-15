@@ -4,6 +4,7 @@
         "es2021": true
     },
     "extends": [
+        "plugin:react/jsx-runtime",
         "plugin:react/recommended",
         "airbnb"
     ],
@@ -18,5 +19,7 @@
         "react"
     ],
     "rules": {
+        "no-console": "off",
+        "no-param-reassign": "off"
     }
 }

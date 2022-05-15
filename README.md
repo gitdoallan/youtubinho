@@ -8,4 +8,4 @@
 - npm i -S uuid
 - npm install --save redux-localstorage
 - npm i -S prop-types
-- npm i -S react-youtube
+- npm i -S react-player

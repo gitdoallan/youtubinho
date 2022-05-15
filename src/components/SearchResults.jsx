@@ -5,9 +5,10 @@ import VideoCard from './VideoCard';
 
 export default function SearchResults() {
   const { videoResults } = useSelector((state) => state);
+  const size = videoResults.length - 1;
   return (
     <ul>
-      {videoResults.map((item) => (
+      {videoResults[size].map((item) => (
         <VideoCard key={item.id} {...item} />
       ))}
     </ul>

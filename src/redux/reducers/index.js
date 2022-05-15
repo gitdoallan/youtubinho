@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 import { defineState } from 'redux-localstore';
 
@@ -19,7 +18,7 @@ export const videoResultsSlice = createSlice({
   name: 'videoResults',
   initialState: [],
   reducers: {
-    videoResults(state, { payload }) { state.push(...payload); },
+    videoResults(state, { payload }) { state.push(payload); },
   },
 });
 
