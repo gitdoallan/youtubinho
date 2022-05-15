@@ -2,8 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {};
 
-export const reducerSlice = createSlice({
-  name: '',
+export const youtube = createSlice({
+  name: 'youtubeReducer',
   initialState,
   reducers: {
   },
@@ -11,4 +11,4 @@ export const reducerSlice = createSlice({
 
 // export const { } = reducerSlice.actions;
 
-export default reducerSlice.reducer;
+export default youtube.reducer;

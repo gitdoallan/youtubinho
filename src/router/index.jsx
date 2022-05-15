@@ -1,14 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
-import NotFound from '../pages/NotFound';
+import Search from '../pages/Search';
 import Video from '../pages/Video';
+import NotFound from '../pages/NotFound';
 
 export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/search/:query" element={<Search />} />
         <Route path="/video/:id" element={<Video />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
