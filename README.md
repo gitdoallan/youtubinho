@@ -7,3 +7,4 @@
 - npm i axios
 - npm i -S uuid
 - npm install --save redux-localstorage
+- npm i -S prop-types

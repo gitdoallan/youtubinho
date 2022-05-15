@@ -9,24 +9,18 @@ export const historySlice = createSlice({
   name: 'searchHistory',
   initialState: searchHistoryState,
   reducers: {
-    addSearchHistory(state, { payload }) {
-      state.push(payload);
-    },
+    addSearchHistory(state, { payload }) { state.push(payload); },
   },
 });
 
 export const { addSearchHistory } = historySlice.actions;
 
-const videoResultsState = defineState(emptyArray)('videoResults');
-
 export const videoResultsSlice = createSlice({
   name: 'videoResults',
-  initialState: videoResultsState,
+  initialState: [],
   reducers: {
-    addVideoResults(state, { payload }) {
-      state.push(payload);
-    },
+    videoResults(state, { payload }) { state.push(...payload); },
   },
 });
 
-export const { addVideoResults } = videoResultsSlice;
+export const { videoResults } = videoResultsSlice.actions;

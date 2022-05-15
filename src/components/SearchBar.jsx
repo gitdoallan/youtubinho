@@ -12,6 +12,7 @@ export default function SearchBar() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSearch('');
     navigate(`/search/${search}`);
   };
 

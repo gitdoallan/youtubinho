@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 
 export default function SearchHistoryList() {
@@ -7,7 +8,9 @@ export default function SearchHistoryList() {
   return (
     <ul>
       {searchHistory.map((item) => (
-        <li key={uuid()}>{item}</li>
+        <li key={uuid()}>
+          <Link to={`/search/${item}`}>{item}</Link>
+        </li>
       ))}
     </ul>
   );

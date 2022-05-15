@@ -2,6 +2,6 @@ import React from 'react';
 
 export default function Loading() {
   return (
-    <span>Loading...</span>
+    <h1 color="red">Loading...</h1>
   );
 }

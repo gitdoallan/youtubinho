@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import searchYouTubeAPI from '../services/api';
+import { searchYouTubeAPI } from '../services/api';
 import Header from '../components/Header';
 import SearchResults from '../components/SearchResults';
-import { addSearchHistory } from '../redux/reducers';
+import { addSearchHistory, videoResults } from '../redux/reducers';
 import SearchHistoryList from '../components/SearchHistoryList';
 
 export default function Search() {
@@ -12,7 +12,9 @@ export default function Search() {
   const { query } = useParams();
   useEffect(() => {
     dispatch(addSearchHistory(query));
-    searchYouTubeAPI(query).then(({ result }) => console.log(result))
+    searchYouTubeAPI(query).then(({ result }) => {
+      dispatch(videoResults(result));
+    })
       .catch((err) => console.log(err));
   }, [query]);
 
