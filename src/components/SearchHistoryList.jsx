@@ -7,7 +7,7 @@ export default function SearchHistoryList() {
   const { searchHistory } = useSelector((state) => state);
   return (
     <ul>
-      {searchHistory.map((item) => (
+      {searchHistory.slice(0).reverse().map((item) => (
         <li key={uuid()}>
           <Link to={`/search/${item}`}>{item}</Link>
         </li>

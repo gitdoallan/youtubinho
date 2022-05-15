@@ -1,6 +1,7 @@
 import React from 'react';
 
-function WatchLater() {
+function WatchLater({ video }) {
+  console.log(video);
   return (
     <button
       type="button"

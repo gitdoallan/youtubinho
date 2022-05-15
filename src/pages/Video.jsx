@@ -35,7 +35,7 @@ export default function Video() {
           <>
             <h1>{videoDetails.title}</h1>
             <Player videoURL={`https://youtube.com/watch?v=${videoDetails.id}`} />
-            <WatchLater />
+            <WatchLater video={videoDetails} />
           </>
         )}
     </div>
