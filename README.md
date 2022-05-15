@@ -6,3 +6,4 @@
 - npm install react-router-dom
 - npm i axios
 - npm i -S uuid
+- npm install --save redux-localstorage
