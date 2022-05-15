@@ -13,13 +13,3 @@ export const historySlice = createSlice({
 });
 
 export const { addSearchHistory } = historySlice.actions;
-
-export const videoResultsSlice = createSlice({
-  name: 'videoResults',
-  initialState: [],
-  reducers: {
-    videoResults(state, { payload }) { state.push(payload); },
-  },
-});
-
-export const { videoResults } = videoResultsSlice.actions;

@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { searchYouTubeAPI } from '../services/api';
 import Header from '../components/Header';
 import SearchResults from '../components/SearchResults';
-import { addSearchHistory, videoResults } from '../redux/reducers';
+import { addSearchHistory } from '../redux/reducers/searchHistory';
+import { videoResults } from '../redux/reducers/videoResults';
 import SearchHistoryList from '../components/SearchHistoryList';
 import Loading from '../components/Loading';
 

@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import storeSynchronize from 'redux-localstore';
-import { historySlice, videoResultsSlice } from '../reducers';
+import { historySlice } from '../reducers/searchHistory';
+import { videoResultsSlice } from '../reducers/videoResults';
 
 const store = configureStore({
   reducer: {

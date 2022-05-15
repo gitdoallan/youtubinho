@@ -1,7 +1,11 @@
 import React from 'react';
+import Header from '../components/Header';
 
 export default function WatchLater() {
   return (
-    <h1>WatchLater</h1>
+    <>
+      <Header />
+      <h1>WatchLater</h1>
+    </>
   );
 }
