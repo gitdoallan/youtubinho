@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import youtubeReducer from '../reducer';
+import youtubeReducer from '../reducers';
 
 const store = configureStore({
   reducer: {
-    youtube: youtubeReducer,
+    searchHistory: youtubeReducer,
   },
 });
 

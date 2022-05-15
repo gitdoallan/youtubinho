@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Search from '../pages/Search';
 import Video from '../pages/Video';
+import SearchHistory from '../pages/SearchHistory';
 import NotFound from '../pages/NotFound';
 
 export default function Router() {
@@ -11,6 +12,7 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search/:query" element={<Search />} />
+        <Route path="/search-history" element={<SearchHistory />} />
         <Route path="/video/:id" element={<Video />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
