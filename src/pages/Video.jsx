@@ -3,6 +3,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import { searchYouTubeAPI } from '../services/api';
 import Loading from '../components/Loading';
 import Header from '../components/Header';
+import Player from '../components/Player';
 
 export default function Video() {
   const { id } = useParams();
@@ -30,7 +31,10 @@ export default function Video() {
       {loading
         ? <Loading />
         : (
-          <h1>{videoDetails.title}</h1>
+          <>
+            <h1>{videoDetails.title}</h1>
+            <Player videoURL={`https://youtube.com/watch?v=${videoDetails.id}`} />
+          </>
         )}
     </div>
   );
