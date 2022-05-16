@@ -4,6 +4,7 @@ import { historySlice } from '../reducers/searchHistory';
 import { videoResultsSlice } from '../reducers/videoResults';
 import { watchLaterSlice } from '../reducers/watchLater';
 import { favoritesSlice } from '../reducers/favorites';
+import { currentVideoSlice } from '../reducers/currentVideo';
 
 const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ const store = configureStore({
     videoResults: videoResultsSlice.reducer,
     watchLater: watchLaterSlice.reducer,
     favorites: favoritesSlice.reducer,
+    currentVideo: currentVideoSlice.reducer,
   },
 });
 

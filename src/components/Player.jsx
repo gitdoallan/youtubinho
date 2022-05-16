@@ -16,7 +16,7 @@ const state = {
   loop: false,
 };
 
-export default function Player({ videoURL }) {
+export default function Player({ videoURL, width, height }) {
   const [playerState, setplayerState] = useState(state);
   const {
     pip, playing, controls, light, volume, muted, playbackRate, loop,
@@ -30,8 +30,8 @@ export default function Player({ videoURL }) {
     <div>
       <ReactPlayer
         className="react-player"
-        width="800px"
-        height="400px"
+        width={width}
+        height={height}
         url={videoURL}
         pip={pip}
         playing={playing}
@@ -42,11 +42,12 @@ export default function Player({ videoURL }) {
         volume={volume}
         muted={muted}
         onReady={() => console.log('ON READY')}
-        onStart={() => console.log('onStart')}
-        onPause={() => console.log('onPause')}
+        onStart={() => console.log('ON START')}
+        onPause={() => setplayerState({ ...playerState, playing: false })}
+        onPlay={() => setplayerState({ ...playerState, playing: true })}
       />
       <button type="button" onClick={() => setplayerState({ ...playerState, muted: !muted })}>Mute</button>
-      <button type="button" id="playBtn" onClick={() => setplayerState({ ...playerState, playing: !playing })}>Play</button>
+      <button type="button" id="playBtn" onClick={() => setplayerState({ ...playerState, playing: !playing })}>{playing ? 'Stop' : 'Play'}</button>
     </div>
   );
 }

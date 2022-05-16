@@ -18,4 +18,4 @@ export const favoritesSlice = createSlice({
   },
 });
 
-export const { favorites } = favoritesSlice.actions;
+export const { addFavorites, removeFavorites } = favoritesSlice.actions;
