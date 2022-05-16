@@ -8,10 +8,12 @@ export const favoritesSlice = createSlice({
   name: 'favorites',
   initialState: favoritesState,
   reducers: {
-    favorites(state, { payload }) {
-      const hasVideo = state.some(({ id }) => id === payload.id);
-      console.log(hasVideo);
+    addFavorites(state, { payload }) {
       state.push(payload);
+    },
+    removeFavorites(state, { payload }) {
+      const filtered = state.filter((item) => item.id !== payload.id);
+      return [...filtered];
     },
   },
 });

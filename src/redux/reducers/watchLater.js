@@ -8,7 +8,10 @@ export const watchLaterSlice = createSlice({
   name: 'watchLater',
   initialState: watchLaterState,
   reducers: {
-    addwatchLater(state, { payload }) { state.push(payload); },
+    addwatchLater(state, { payload }) {
+      const filtered = state.filter((item) => item.id !== payload.id);
+      return [...filtered, payload];
+    },
   },
 });
 
