@@ -8,7 +8,10 @@ export const historySlice = createSlice({
   name: 'searchHistory',
   initialState: searchHistoryState,
   reducers: {
-    addSearchHistory(state, { payload }) { state.push(payload); },
+    addSearchHistory(state, { payload }) {
+      const filtered = state.filter((item) => item !== payload);
+      return [...filtered, payload];
+    },
   },
 });
 

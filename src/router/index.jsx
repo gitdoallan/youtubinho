@@ -10,6 +10,7 @@ import WatchLater from '../pages/WatchLater';
 import Favorites from '../pages/Favorites';
 import Profile from '../pages/Profile';
 import LikedVideos from '../pages/LikedVideos';
+import WatchedVideos from '../pages/WatchedVideos';
 import NotFound from '../pages/NotFound';
 
 export default function Router() {
@@ -26,6 +27,7 @@ export default function Router() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
+        <Route path="/watched-videos" element={<WatchedVideos />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

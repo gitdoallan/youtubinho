@@ -14,6 +14,8 @@ export default function LinksMenu() {
       {' - '}
       <Link to="/liked-videos">Liked Videos</Link>
       {' - '}
+      <Link to="/watched-videos">Watched Videos</Link>
+      {' - '}
       <Link to="/login">Login</Link>
       {' - '}
       <Link to="/about">About</Link>

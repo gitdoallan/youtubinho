@@ -5,6 +5,8 @@ import Loading from '../components/Loading';
 import Header from '../components/Header';
 import Player from '../components/Player';
 import WatchLater from '../components/WatchLater';
+import ShareVideo from '../components/ShareVideo';
+import FavoriteButton from '../components/FavoriteButton';
 
 export default function Video() {
   const { id } = useParams();
@@ -36,6 +38,8 @@ export default function Video() {
             <h1>{videoDetails.title}</h1>
             <Player videoURL={`https://youtube.com/watch?v=${videoDetails.id}`} />
             <WatchLater video={videoDetails} />
+            <ShareVideo />
+            <FavoriteButton videoDetails={videoDetails} />
           </>
         )}
     </div>

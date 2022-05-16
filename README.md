@@ -9,3 +9,4 @@
 - npm install --save redux-localstorage
 - npm i -S prop-types
 - npm i -S react-player
+- npm i clipboard-copy

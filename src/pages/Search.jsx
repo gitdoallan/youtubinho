@@ -18,13 +18,13 @@ export default function Search() {
   useEffect(() => {
     dispatch(addSearchHistory(query));
     searchYouTubeAPI(query).then(({ result }) => {
+      console.log(result);
       dispatch(videoResults(result));
     })
       .catch((err) => console.log(err));
   }, [query]);
 
   useEffect(() => {
-    console.log(!size?.length);
     setLoading(!size?.length);
   }, [checkResults, query]);
 
@@ -34,7 +34,7 @@ export default function Search() {
       <h1>Search</h1>
       {loading ? <Loading /> : <SearchResults />}
       <h2>SearchHistoryList</h2>
-      <SearchHistoryList />
+      <SearchHistoryList fromElse />
     </>
   );
 }
