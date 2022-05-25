@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from '../components/Header';
 
-export default function LikedVideos() {
+export default function WatchedVideos() {
   return (
     <>
       <Header />
-      <h1>LikedVideos</h1>
+      <div>WatchedVideos</div>
     </>
   );
 }

@@ -1,7 +1,11 @@
 import React from 'react';
+import Header from '../components/Header';
 
 export default function NotFound() {
   return (
-    <h1>Not found</h1>
+    <>
+      <Header />
+      <h1>Not found</h1>
+    </>
   );
 }

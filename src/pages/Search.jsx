@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { searchYouTubeAPI } from '../services/api';
 import Header from '../components/Header';
 import SearchResults from '../components/SearchResults';
-import { addSearchHistory, videoResults } from '../redux/reducers';
+import { addSearchHistory } from '../redux/reducers/searchHistory';
+import { videoResults } from '../redux/reducers/videoResults';
 import SearchHistoryList from '../components/SearchHistoryList';
 import Loading from '../components/Loading';
 
@@ -17,13 +18,13 @@ export default function Search() {
   useEffect(() => {
     dispatch(addSearchHistory(query));
     searchYouTubeAPI(query).then(({ result }) => {
+      console.log(result);
       dispatch(videoResults(result));
     })
       .catch((err) => console.log(err));
   }, [query]);
 
   useEffect(() => {
-    console.log(!size?.length);
     setLoading(!size?.length);
   }, [checkResults, query]);
 
@@ -33,7 +34,7 @@ export default function Search() {
       <h1>Search</h1>
       {loading ? <Loading /> : <SearchResults />}
       <h2>SearchHistoryList</h2>
-      <SearchHistoryList />
+      <SearchHistoryList fromElse />
     </>
   );
 }

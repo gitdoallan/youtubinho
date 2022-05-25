@@ -1,7 +1,7 @@
 # Dependencies 
 
 - npm install @reduxjs/toolkit react-redux
-- npm install eslint --save-dev
+- npm install eslint -D
 - npm init @eslint/config
 - npm install react-router-dom
 - npm i axios
@@ -9,3 +9,5 @@
 - npm install --save redux-localstorage
 - npm i -S prop-types
 - npm i -S react-player
+- npm i clipboard-copy
+- npm i -D email-validator
